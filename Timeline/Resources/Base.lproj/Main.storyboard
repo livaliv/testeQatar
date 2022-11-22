@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gNs-5D-dvo">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Move View Controller-->
+        <scene sceneID="FAD14478-AB48-4DD0-B8ED-4859BFEECB18">
+            <objects>
+                <viewController storyboardIdentifier="MoveViewController" id="MoveViewController" customClass="MoveViewController" customModule="Timeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FC6938C3-12B7-462D-BD08-F74F24A91430"/>
+                        <viewControllerLayoutGuide type="bottom" id="AF882B01-AFC3-4AE5-9234-707D6EDB75F2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C192A77D-01CF-4542-91BF-335798F7C177">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2E380BB6-4F4C-4884-9BD6-DCF51315B1D8" customClass="MoveView" customModule="Timeline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="2E380BB6-4F4C-4884-9BD6-DCF51315B1D8" firstAttribute="centerX" secondItem="C192A77D-01CF-4542-91BF-335798F7C177" secondAttribute="centerX" id="37D3BDAD-F0FE-4719-AD18-265F3D7707A0"/>
+                            <constraint firstItem="2E380BB6-4F4C-4884-9BD6-DCF51315B1D8" firstAttribute="centerY" secondItem="C192A77D-01CF-4542-91BF-335798F7C177" secondAttribute="centerY" id="C0EE1E43-E2D4-4A1F-A154-27B1DF144ABA"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="375"/>
+                    <connections>
+                        <outlet property="move" destination="2E380BB6-4F4C-4884-9BD6-DCF51315B1D8" id="B57C6436-F7AD-4978-BBFC-0FD3DB023E73"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D63839D9-8263-4B4A-9973-E1B92C449F5B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Launch Animation View Controller-->
+        <scene sceneID="uPg-I4-Jwi">
+            <objects>
+                <viewController id="gNs-5D-dvo" customClass="LaunchAnimationViewController" customModule="Timeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lws-Dv-aGB"/>
+                        <viewControllerLayoutGuide type="bottom" id="NOy-1h-cy6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lsv-YY-aZj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJs-KB-Ydh" customClass="LaunchAnimationView" customModule="Timeline" customModuleProvider="target">
+                                <rect key="frame" x="42.5" y="303.5" width="290" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="F34-UY-EOV"/>
+                                    <constraint firstAttribute="width" constant="290" id="lnu-tW-77y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CJs-KB-Ydh" firstAttribute="centerY" secondItem="Lsv-YY-aZj" secondAttribute="centerY" id="Uwo-hT-4Ki"/>
+                            <constraint firstItem="CJs-KB-Ydh" firstAttribute="centerX" secondItem="Lsv-YY-aZj" secondAttribute="centerX" id="pPV-qb-LTz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scene" destination="CJs-KB-Ydh" id="KDI-Qj-fDB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxw-N1-2S8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="649"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="2E380BB6-4F4C-4884-9BD6-DCF51315B1D8">
+            <size key="intrinsicContentSize" width="375" height="375"/>
+        </designable>
+        <designable name="CJs-KB-Ydh">
+            <size key="intrinsicContentSize" width="290" height="60"/>
+        </designable>
+    </designables>
+</document>
